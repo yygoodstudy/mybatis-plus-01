@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mybatis-plus-demo?useSSL=false&serverTimeZone=GMT%2B8
+    username: root
+    password: root
+#mp集成了LogBic
+logging:
+  level:
+    root: info
+    com.mp: debug
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true #禁掉驼峰命名自动匹配；MP默认开启
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #控制台打印SQL
